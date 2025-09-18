@@ -27,7 +27,7 @@ export default async function handler(req, res) {
                               acaoGlobal = "A11";
                               console.log('Setando acaoglobal para ',{acaoGlobal});
                               res.status(201).json(acaoGlobal);
-                              lastActionGlobal = 'executando';
+                              lastActionGlobal = null;
                             } catch (error) {
                                 res.status(500).json({ error: "Failed to create action" });
                               } 
@@ -37,7 +37,7 @@ export default async function handler(req, res) {
                             acaoGlobal = "A21";
                             console.log('Setando acaoglobal para',{acaoGlobal});
                               res.status(201).json(acaoGlobal);
-                              lastActionGlobal = 'executando';
+                              lastActionGlobal = null;
                             } catch (error) {
                                 res.status(500).json({ error: "Failed to create action" });
                               } 
