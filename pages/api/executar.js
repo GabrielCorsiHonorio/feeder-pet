@@ -28,6 +28,11 @@ export default async function handler(req, res) {
                               console.log('Setando acaoglobal para ',{acaoGlobal});
                               res.status(201).json(acaoGlobal);
                               lastActionGlobal = null;
+
+                            setTimeout(() => {
+                                acaoGlobal = null;
+                                console.log('Variável global estadoGlobal configurada para null após 20 s.');
+                            }, 20 * 1000); 
                             } catch (error) {
                                 res.status(500).json({ error: "Failed to create action" });
                               } 
@@ -38,6 +43,11 @@ export default async function handler(req, res) {
                             console.log('Setando acaoglobal para',{acaoGlobal});
                               res.status(201).json(acaoGlobal);
                               lastActionGlobal = null;
+
+                            setTimeout(() => {
+                                acaoGlobal = null;
+                                console.log('Variável global estadoGlobal configurada para null após 20 s.');
+                            }, 20 * 1000); 
                             } catch (error) {
                                 res.status(500).json({ error: "Failed to create action" });
                               } 
