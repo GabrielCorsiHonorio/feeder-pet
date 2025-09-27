@@ -43,6 +43,13 @@ export default async function handler(req, res) {
                     res.status(200).json({ time: dateStr });
                     break;
 
+                case "config":
+                    const schedule = [6, 12, 18];
+
+                    const portion = 65;
+
+                    res.status(200).json({Schedule: schedule, Portion: portion});
+
                 default:
                     res.status(400).json({ error: 'Invalid action for GET request.' });
             }
